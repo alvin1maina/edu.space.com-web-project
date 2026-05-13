@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galaxies</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#0b1020;
+      color:#f1f5f9;
+      line-height:1.7;
+      padding:40px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      background:#111827;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 0 25px rgba(0,0,0,0.6);
+    }
+
+    .hero{
+      padding:40px;
+      background:linear-gradient(135deg,#111827,#1e293b);
+      text-align:center;
+      border-bottom:1px solid #334155;
+    }
+
+    .hero h1{
+      font-size:3rem;
+      margin-bottom:10px;
+      color:#60a5fa;
+    }
+
+    .hero p{
+      color:#cbd5e1;
+      font-size:1.1rem;
+    }
+
+    .section{
+      display:flex;
+      align-items:center;
+      gap:25px;
+      padding:30px 40px;
+      border-bottom:1px solid #1e293b;
+    }
+
+    .section img{
+      width:280px;
+      height:180px;
+      object-fit:cover;
+      border-radius:14px;
+      border:2px solid #334155;
+      flex-shrink:0;
+    }
+
+    .content h2{
+      color:#93c5fd;
+      margin-bottom:10px;
+      font-size:1.8rem;
+    }
+
+    .content p{
+      color:#d1d5db;
+      font-size:1rem;
+    }
+
+    
+
+    @media(max-width:768px){
+      .section{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .section img{
+        width:100%;
+        height:auto;
+      }
+
+      .hero h1{
+        font-size:2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <nav style="text-align: center; padding: 20px; background: #1e293b; margin-bottom: 20px; border-radius: 10px;">
+      <a href="index.html" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Home</a>
+      <a href="galaxy.html" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Galaxies</a>
+      <a href="black-holes.html" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Black Holes</a>
+      <a href="earth.html" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Earth</a>
+      <a href="nebula.html" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Nebulae</a>
+      <a href="outer-planets.html" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Outer Planets</a>
+      <a href="sun-and-stars.html" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Sun & Stars</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>Galaxies</h1>
+      <p>Exploring the vast cosmic systems that shape our universe.</p>
+    </div>
+
+    <!-- Spiral Galaxy -->
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1200&auto=format&fit=crop" alt="Spiral Galaxy">
+
+      <div class="content">
+        <h2>Spiral Galaxies</h2>
+        <p>
+          Spiral galaxies are among the most beautiful structures in the universe.
+          They contain rotating arms filled with stars, gas, and dust. The Milky Way,
+          our home galaxy, is a barred spiral galaxy with billions of stars.
+        </p>
+      </div>
+    </div>
+
+    <!-- Elliptical Galaxy -->
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=1200&auto=format&fit=crop" alt="Elliptical Galaxy">
+
+      <div class="content">
+        <h2>Elliptical Galaxies</h2>
+        <p>
+          Elliptical galaxies have smooth, rounded shapes and contain older stars.
+          They lack the spiral arms found in other galaxies and are often formed
+          through galaxy collisions and mergers over billions of years.
+        </p>
+      </div>
+    </div>
+
+    <!-- Irregular Galaxy -->
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?q=80&w=1200&auto=format&fit=crop" alt="Irregular Galaxy">
+
+      <div class="content">
+        <h2>Irregular Galaxies</h2>
+        <p>
+          Irregular galaxies do not follow a specific shape or structure.
+          Their unusual appearance is often caused by gravitational interactions
+          with neighboring galaxies, leading to intense star formation activity.
+        </p>
+      </div>
+    </div>
+
+    <!-- Milky Way -->
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=1200&auto=format&fit=crop" alt="Milky Way Galaxy">
+
+      <div class="content">
+        <h2>The Milky Way</h2>
+        <p>
+          The Milky Way is the galaxy that contains our Solar System and is one of the
+          billions of galaxies in the observable universe. It is a barred spiral galaxy
+          with a diameter of about 100,000 light-years and contains hundreds of billions
+          of stars. From Earth, the Milky Way appears as a glowing band of light stretching
+          across the night sky, created by the combined light of distant stars and cosmic dust.
+          Scientists believe a supermassive black hole exists at its center, influencing the
+          movement of stars and other celestial objects throughout the galaxy.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+  
+
+  </div>
+
+</body>
+</html>

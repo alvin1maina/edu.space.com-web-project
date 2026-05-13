@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nebula Explorer | Astronomy</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#050816;
+            color:white;
+            line-height:1.7;
+        }
+
+        header{
+            height:100vh;
+            background:
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+                url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1400&auto=format&fit=crop');
+            background-size:cover;
+            background-position:center;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        header h1{
+            font-size:70px;
+            color:#7dd3fc;
+            text-shadow:0 0 20px #38bdf8;
+            margin-bottom:20px;
+        }
+
+        header p{
+            max-width:800px;
+            font-size:20px;
+            color:#d1d5db;
+        }
+
+        nav{
+            position:sticky;
+            top:0;
+            background:#0b1120;
+            padding:15px;
+            text-align:center;
+            border-bottom:1px solid #1e293b;
+            z-index:1000;
+        }
+
+        nav a{
+            color:#7dd3fc;
+            text-decoration:none;
+            margin:0 15px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:white;
+        }
+
+        section{
+            padding:70px 10%;
+        }
+
+        .section-title{
+            font-size:40px;
+            margin-bottom:20px;
+            color:#7dd3fc;
+            text-align:center;
+        }
+
+        .card-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+            margin-top:40px;
+        }
+
+        .card{
+            background:#111827;
+            padding:25px;
+            border-radius:15px;
+            border:1px solid #1f2937;
+            transition:0.4s;
+            box-shadow:0 0 10px rgba(0,0,0,0.4);
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+            box-shadow:0 0 20px rgba(56,189,248,0.5);
+        }
+
+        .card h3{
+            color:#38bdf8;
+            margin-bottom:15px;
+        }
+
+        .image-section{
+            text-align:center;
+        }
+
+        .image-section img{
+            width:90%;
+            max-width:1000px;
+            border-radius:20px;
+            margin-top:30px;
+            box-shadow:0 0 25px rgba(56,189,248,0.5);
+        }
+
+        .facts{
+            background:#0f172a;
+            border-left:5px solid #38bdf8;
+            padding:30px;
+            border-radius:10px;
+            margin-top:30px;
+        }
+
+        footer{
+            background:#020617;
+            text-align:center;
+            padding:25px;
+            color:#94a3b8;
+            border-top:1px solid #1e293b;
+        }
+
+        button{
+            margin-top:30px;
+            padding:15px 35px;
+            border:none;
+            background:#38bdf8;
+            color:black;
+            font-weight:bold;
+            border-radius:30px;
+            cursor:pointer;
+            transition:0.3s;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:white;
+            transform:scale(1.05);
+        }
+
+        @media(max-width:768px){
+            header h1{
+                font-size:45px;
+            }
+
+            header p{
+                font-size:18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nebula Explorer</h1>
+        <p>
+            Discover the beauty and mystery of nebulae — giant clouds of dust and gas
+            floating across the universe where stars are born and cosmic events unfold.
+        </p>
+
+        <button onclick="showMessage()">Explore the Cosmos</button>
+    </header>
+
+    <nav style="text-align: center; padding: 20px; background: #1e293b; margin-bottom: 20px; border-radius: 10px;">
+        <a href="index.html" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Home</a>
+        <a href="galaxy.html" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Galaxies</a>
+        <a href="black-holes.html" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Black Holes</a>
+        <a href="earth.html" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Earth</a>
+        <a href="outer-planets.html" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Outer Planets</a>
+        <a href="sun-and-stars.html" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Sun & Stars</a>
+        <a href="#about" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">About Nebulae</a>
+        <a href="#types" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Types</a>
+        <a href="#facts" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Facts</a>
+        <a href="#gallery" style="color: #93c5fd; text-decoration: none; margin: 0 15px; font-weight: bold;">Gallery</a>
+    </nav>
+
+    <section id="about">
+        <h2 class="section-title">What is a Nebula?</h2>
+
+        <p>
+            A nebula is a massive cloud of gas and dust in outer space. Nebulae are some
+            of the most beautiful and important structures in astronomy. They can be
+            regions where new stars are formed or remnants left behind after stars explode.
+        </p>
+
+        <br>
+
+        <p>
+            The word “nebula” comes from a Latin word meaning “cloud.” Nebulae are mostly
+            made of hydrogen and helium. Some nebulae stretch across hundreds of light-years
+            and glow brightly due to nearby stars.
+        </p>
+
+        <div class="facts">
+            <h3>Why Nebulae Matter</h3>
+            <p>
+                Nebulae help scientists understand how stars and solar systems are created.
+                They also reveal important information about the life cycle of stars and
+                the evolution of galaxies.
+            </p>
+        </div>
+    </section>
+
+    <section id="types">
+        <h2 class="section-title">Types of Nebulae</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Emission Nebula</h3>
+                <p>
+                    These nebulae glow because nearby hot stars energize the gas inside them.
+                    The Orion Nebula is a famous example.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Reflection Nebula</h3>
+                <p>
+                    Reflection nebulae do not produce their own light. Instead, they reflect
+                    the light of nearby stars, often appearing blue.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Dark Nebula</h3>
+                <p>
+                    Dark nebulae block light from stars behind them due to dense dust clouds,
+                    making them appear as dark patches in space.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Planetary Nebula</h3>
+                <p>
+                    These form when dying stars release outer layers into space, creating
+                    colorful glowing shells.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Supernova Remnant</h3>
+                <p>
+                    A supernova remnant is created after a massive star explodes. These nebulae
+                    contain shock waves and enriched elements.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="facts">
+        <h2 class="section-title">Interesting Facts</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Star Factories</h3>
+                <p>
+                    Many stars are born inside nebulae through gravitational collapse.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Massive Size</h3>
+                <p>
+                    Some nebulae are larger than entire solar systems and stretch for
+                    hundreds of light-years.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Colorful Appearance</h3>
+                <p>
+                    Different gases produce different colors. Hydrogen often glows red,
+                    while oxygen can glow blue or green.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="gallery" class="image-section">
+        <h2 class="section-title">Nebula Gallery</h2>
+
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1400&auto=format&fit=crop" alt="Nebula Image">
+
+    </section>
+
+    <footer>
+        <p>
+            Astronomy Web Project | Exploring the Wonders of Nebulae ✨
+        </p>
+    </footer>
+
+    <script>
+        function showMessage(){
+            alert("Welcome to the Nebula Explorer! Journey through the universe and discover cosmic wonders.");
+        }
+    </script>
+
+</body>
+</html>

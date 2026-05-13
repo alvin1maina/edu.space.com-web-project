@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #001122; /* Dark blue background */
+  color: #ffffff; /* White text */
+}
+
+nav {
+  background: #003366; /* Darker blue for nav */
+  color: white;
+  padding: 15px 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #002244; /* Slightly lighter blue for hero */
+}
+
+.planet-box {
+  width: 80%;
+  margin: 30px auto;
+  border: 5px solid #004477; /* Blue border */
+  padding: 30px;
+  background-color: #001133; /* Dark blue box background */
+}
+
+.planet-row {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+details {
+  width: 220px;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+  border: 4px solid #004477; /* Blue border */
+  padding: 0;
+  width: 220px;
+  height: 160px;
+  overflow: hidden;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.planet-info {
+  max-width: 300px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffffff; /* Ensure text is white */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .planet-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .planet-box {
+    width: 95%;
+    padding: 20px;
+  }
+
+  details, summary {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .planet-info {
+    text-align: center;
+    max-width: none;
+  }
+}

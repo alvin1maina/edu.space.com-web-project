@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 20px;
+}
+
+nav h1{
+    color: orange;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+/* MAIN TEXT */
+h2{
+    text-align: center;
+    margin-top: 40px;
+    color: orange;
+}
+
+p{
+    text-align: center;
+    margin-top: 10px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.card{
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card h3{
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.card p{
+    line-height: 1.6;
+}.feature{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+    align-items: center;
+}
+
+.feature-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.feature-text h2{
+    color: orange;
+    margin-bottom: 15px;
+}
+
+.feature-text p{
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+.card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 165, 0, 0.3);
+}
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px){
+
+    nav{
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .feature{
+        grid-template-columns: 1fr;
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+    }
+
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav, h2, p, .cards, .feature{
+    animation: fadeIn 1s ease-in;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #111;
+    color: white;
+}
+body{
+    background: radial-gradient(circle at top, #0b0f1a, #000);
+}
